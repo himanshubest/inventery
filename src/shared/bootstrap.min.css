@@ -1,0 +1,9 @@
+/* Add custom styles if needed */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+.dropdown-menu {
+    min-width: 160px; /* Adjust width if necessary */
+}

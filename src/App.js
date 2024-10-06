@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import _LoginLayout from './login/_LoginLayout';
+import Privateroute from './routing/privaterout';
+import AdminDashboard from './dashboard/DeviceMaster';
+import Login from './login/login';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import CreatePo from './PoDetails/CreatePo';
+import ListPo from './PoDetails/ListPo';
+import StockRecivingBulk from './StockReciving/StockRecivingBulk';
+import DeviceList from './StockReciving/DeviceList';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Router>
+      <ToastContainer  position='top-right' theme="colored"/>
+      <Routes>
+        
+      <Route path="/login" element={<Login />} />
+      
+      <Route path="/" element={<Privateroute />}>
+            <Route path="/DeviceMaster" element={<AdminDashboard />} />
+            <Route path="/CreatePo" element={<CreatePo />} />
+            <Route path="/ListPo" element={<ListPo />} />
+            <Route path="/StockRecivingBulk" element={<StockRecivingBulk />} />
+            <Route path="/DeviceList" element={<DeviceList />} />
+      </Route>
+        
+        </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,26 @@
+.custom-table .ant-table-tbody > tr > td {
+    border: 1px solid #d9d9d9; /* Border around table cells */
+  }
+  
+  .custom-table .ant-table-thead > tr > th {
+    border: 1px solid #d9d9d9; /* Border around header cells */
+  }
+  
+  .custom-table .ant-table-tbody > tr:hover > td {
+    border-color: #40a9ff; /* Change border color on row hover */
+  }
+  
+  .custom-table .ant-table-thead > tr > th, 
+  .custom-table .ant-table-tbody > tr > td {
+    border-left: 1px solid #d9d9d9; /* Left border for all columns */
+    border-right: 1px solid #d9d9d9; /* Right border for all columns */
+  }
+  
+  .custom-table .ant-table-tbody > tr:first-child > td {
+    border-top: 1px solid #d9d9d9; /* Top border for the first row */
+  }
+  
+  .custom-table .ant-table-tbody > tr:last-child > td {
+    border-bottom: 1px solid #d9d9d9; /* Bottom border for the last row */
+  }
+  
